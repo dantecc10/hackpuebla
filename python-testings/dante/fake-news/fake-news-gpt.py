@@ -49,8 +49,8 @@ print(f'Accuracy: {accuracy * 100:.2f}%')
 #model.save('fake_news_model.h5')
 
 # Para cargar el modelo
- from tensorflow.keras.models import load_model
- model = load_model('fake_news_model.h5')
+from tensorflow.keras.models import load_model
+model = load_model('fake_news_model.h5')
 
 # Función para predecir noticias nuevas
 def predict_news(text):
@@ -60,5 +60,5 @@ def predict_news(text):
     return 'Fake' if pred < 0.5 else 'Real'
 
 # Ejemplo de uso
-news = "Some new news text to classify"
+news = "Nicolas Maduro "
 print(predict_news(news))

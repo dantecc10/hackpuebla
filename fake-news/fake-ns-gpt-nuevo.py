@@ -12,6 +12,10 @@ test_data = pd.read_csv('fake-news/test.csv')
 # Eliminar filas con valores nulos
 train_data = train_data.dropna()
 
+# Rellenar valores nulos en la columna 'text' con una cadena vacía
+test_data['text'] = test_data['text'].fillna('')
+
+
 # Preprocesar el texto
 tokenizer = Tokenizer(num_words=5000)
 tokenizer.fit_on_texts(train_data['text'])
