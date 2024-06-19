@@ -60,7 +60,7 @@ def predict_news(text):
     seq = tokenizer.texts_to_sequences([text])
     padded = pad_sequences(seq, maxlen=500)
     pred = model.predict(padded)
-    return 'Fake' if pred < 0.5 else 'Real'
+    return 'Fake' if pred < 1 else 'Real' #Funciona mejor desde 1
 
 # Ejemplo de uso
 news = "Noam Chomsky dies"
