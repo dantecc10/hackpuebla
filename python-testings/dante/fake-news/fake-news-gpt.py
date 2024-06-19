@@ -46,11 +46,11 @@ loss, accuracy = model.evaluate(X_test, y_test, verbose=2)
 print(f'Accuracy: {accuracy * 100:.2f}%')
 
 # Guardar el modelo
-model.save('fake_news_model.h5')
+#model.save('fake_news_model.h5')
 
 # Para cargar el modelo
-# from tensorflow.keras.models import load_model
-# model = load_model('fake_news_model.h5')
+ from tensorflow.keras.models import load_model
+ model = load_model('fake_news_model.h5')
 
 # Función para predecir noticias nuevas
 def predict_news(text):
