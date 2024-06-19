@@ -31,7 +31,7 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense, SpatialDropout1D
 
 # Construir el modelo
 model = Sequential()
-model.add(Embedding(input_dim=5000, output_dim=128)#, input_length=500))
+model.add(Embedding(input_dim=5000, output_dim=128))#, input_length=500))
 model.add(SpatialDropout1D(0.2))
 model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
 model.add(Dense(1, activation='sigmoid'))
