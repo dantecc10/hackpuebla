@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 
 # Cargar el conjunto de datos
-data = pd.read_csv('fake-news/train.csv')
+data = pd.read_csv('train.csv')
 
 # Eliminar filas con valores nulos
 data = data.dropna()
