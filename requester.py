@@ -1,9 +1,11 @@
 import requests
 
-url = 'https://compupandilla.castelancarpinteyro.com/web-repo/?name=Dante&last_names=Castelan%20Carpinteyro'
+url = 'https://compupandilla.castelancarpinteyro.com/web-repo/'#?name=Dante&last_names=Castelan%20Carpinteyro'
 
-# Hacer una solicitud GET
-response = requests.get(url)
+# Hacer una solicitud POST
+response = requests.post(url, data={'name': 'Dante', 'last_names': 'Castelan Carpinteyro'})
+#response = requests.get(url)
+
 
 # Verificar si la solicitud fue exitosa
 if response.status_code == 200:
